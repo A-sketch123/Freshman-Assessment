@@ -1,0 +1,353 @@
+/*版心*/
+.w {
+  width: 1200px;
+  margin: 0 auto;
+}
+/*快捷导航模块*/
+.shortcut {
+  height: 37px;
+  background-color: #3d3d3d;
+  color: white;
+  line-height: 37px;
+}
+
+ul li,.center{
+    font-weight: 700;
+}
+.shortcut ul li {
+  float: left;
+}
+.center {
+  padding-left: 573px;
+}
+.fr ul li {
+  float: right;
+  margin-top: -36px;
+}
+.fl ul li:last-child,.fr li:first-child{
+    margin-left: 21px;
+}
+/*让指定的文字之间有间距*/
+
+.fr img{
+    margin-top: -7px;
+}
+.logo{
+    height: 125px;
+    width: 100%;
+    padding: 15px 0 0 0;
+    display: inline-block;
+}
+
+.logo ul li{
+    float: left;
+}
+.logo ul li:nth-child(2){
+    margin:5px 0 0 8px;
+   font-size: 34px;
+   font-weight: 900;
+}
+/*对第二个li操作*/
+.logo ul li:nth-child(3){
+    margin: 50px 220px 0 -102px;
+}
+/*对第三个li操作*/
+.logo ul li:nth-child(4)
+{
+  color:#1ba19d;
+}
+.logo ul li:nth-child(n+4)
+/*选择从第四个开始的*/{
+       padding-left: 65px;
+       line-height: 80px;
+       /*使文字居中*/
+       font-weight: 900;
+}
+.header{
+  position: relative;
+}
+.header button:hover{
+  text-shadow: 5px 5px 5px #888888;
+  opacity:0.5;
+}
+/*访问搜索时增加样式*/
+.header img{
+  height: 377px;
+  width: 100%;
+  position: relative;
+}
+.nav{
+  /*用定位使nav模块位于img里面*/
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  margin-left: -340px;
+  /*使nav模块水平居中，先走一半，再走自己宽度的一半*/
+  height: 138px;
+  width: 680px;
+  color: white;
+}
+.nav input{
+  float: left;
+  height: 50px;
+  width: 560px;
+  padding-left: 18px;
+  /*使搜索框里的文字留边距*/
+}
+.nav button{
+  float: left;
+  /*用浮动清楚行内块元素的缝隙，使其与搜索框贴合*/
+  width: 118px;
+  height: 50px;
+  background-color:#1ba19d;
+  color: white;
+  font-weight: 550;
+  letter-spacing:3px
+}
+.nav button img{
+  height: 43px;
+  width: 35px;
+  padding-bottom: 7px;
+}
+.search1{
+  margin-bottom: 66px;
+}
+.hotwrods ul li{
+  float: left;
+  font-weight: 300;
+  font-size: 13px;
+  padding: 0 6px;
+  /*将字与字挤开*/
+  margin-top: 8px;
+}
+.hotwrods ul li:first-child{
+margin-right: -18px;
+}
+
+.hotwrods ul li:nth-child(n+3){
+  border-left: 1px solid white;
+}
+.title{
+  height: 70px;
+  font-size: 22px;
+  color: #1ba19d;
+  font-weight: 700;
+  padding-top: 35px;
+  text-align: center;
+  border-bottom: 2px solid #c6c6c6;
+}
+.content{
+  height:300px ;
+  overflow: hidden;
+  border-right: 2px solid #c6c6c6;
+  border-bottom: 2px solid #c6c6c6;
+  padding: 0 auto;
+  
+}
+.text ul{
+  float: left;
+}
+.text ul li{
+  border-bottom: 3px solid #c6c6c6;
+  width: 154px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-left: 1px solid #c6c6c6;
+  border-right: 1px solid #c6c6c6;
+}
+.text ul li:not(:first-child):not(:last-child){
+  background-color: #3d3d3d;
+  color: white;
+  
+}
+
+.text .last{
+  border-right: 2px solid #c6c6c6;
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
+  height: 98px;
+}
+.fous{
+  overflow: hidden;
+  width: 1044px;
+  font-size: 13px;
+  position: relative;
+  height: 310px;
+  padding-left: 40px;
+  margin: 15px auto;
+  
+ }
+ .fous  img  {
+ float: left;
+   margin-right: 20px;
+   margin-left: 15px;
+ }
+.fous span{
+ float: left;
+  padding-top: 6px;
+  margin-right: 52px;
+}
+
+.fous p{
+  color: #1ba19d;
+  float: left;
+  margin-left: -105px;
+  padding-top: 90px;
+}
+.p3{
+  height: 50px;
+  margin-top: 155px;
+}
+.p4{
+margin-top: -50px;
+}
+
+.footer{
+  height: 175px;
+  margin: 50px auto 65px;
+  border-top: 2px solid #3d3d3d;
+  text-align: center
+}
+.footer img,
+.price img
+{
+  margin-top: 8px;
+}
+.white{
+  width:600px ;
+  margin: 17px 0 28px 0;
+  float: left;
+}
+.car,
+.world,
+.footer img,
+.clock span,
+.cro img{
+  float: left;
+}
+ .white span{
+  font-weight: 900;
+ margin-left: -27px;
+ font-size: 19px;
+}
+.footer .white span:last-child{
+  font-size: 10px;
+  font-weight: 400;
+  display: block;
+  margin-left: 50px;
+  margin-top: 3px;
+}
+.r{
+  margin-left: 140px;
+}
+.p5{
+  display: inline-block;
+  padding-left: 40px;
+}
+.black{
+  background-color: #3d3d3d;
+  height: 100%;
+  float: left;
+  width:600px ;
+}
+.clipboard{
+margin-top: 88px;
+}
+.footer .white .clipboard span{
+  margin-left: -400px;
+}
+.clipboard p
+{
+  font-size: 10px;
+  margin-right: 435px;
+  margin-top: 3px;
+}
+.clock{
+ background: url(../img/CLOCK.png);
+ height: 40px;
+ background-repeat: no-repeat;
+ margin: -6% 0 0 303px;
+}
+.clock span{
+  margin-left: 50px;
+ margin-top: -5px;
+}
+.clock p{
+  font-size: 10px;
+  font-weight: 400;
+  display: inline-block;
+  margin-left: -215px;
+  margin-top: 22px;
+}
+.box{
+  height: 140px;  
+  margin: 16px 0 0 35px;
+  color: white;
+}
+
+.box span{
+  font-weight: 900;
+  font-size: 19px;
+  padding-left: 12px;
+  float: left;
+}
+.box p{
+  font-size: 10px;
+  margin-left: -58px;
+  margin-top: 28px;
+  color: #bdbdbd;
+  float: left;
+}
+.cro img{
+  margin-left: 75px;
+  margin-top: 5px;
+}
+.lab{
+  margin-top: 44px;
+  height: 120px;
+  float: left;
+}
+.gear{
+  margin-top: 44px;
+  margin-left: 100px;
+  float: left;
+}
+.navitems{
+  position: absolute;
+  right: 3px;
+  top: 446px;
+  width: 85px;
+}
+.navitems img{
+  margin-bottom: 5px;
+}
+.navitems ul li:last-child{
+  width: 100%;
+  height: 95px;
+  background-color:#6d6c6c;
+  text-align: center;
+  padding-top: 10px;
+}
+.navitems li p {
+  color: white;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.navitems .imp .qrcode{
+  width: 150px;
+  height: 170px;
+  position: absolute;
+  top: -50px;
+  right: 160px;
+  display: none;
+  /*将二维码先隐藏，等鼠标移入时显示*/
+}
+.imp:hover  .qrcode{
+display: block;
+}
+.navitems ul li p:hover{
+  color:lightgreen;
+}
