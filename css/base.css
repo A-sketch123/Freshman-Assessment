@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*这样会使padding和border不会撑大盒子 */
+}
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+img {
+  border: 0;
+  /*照顾低版本浏览器，若图片外包含标签会有边框问题*/
+  vertical-align: middle;
+  /*取消图片底侧有空白缝隙问题*/
+}
+button,
+input,
+audio
+ {
+  cursor: pointer;
+  /*鼠标滑过时变成手*/
+  border: 0;
+  /*把默认的边框去掉*/
+  outline: none;
+  /*把点击完的蓝色边框去掉*/
+
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+}
+.clearfix:after{
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/*清除浮动的影响*/
+.clearfix{
+  /*TE6,7专有*/
+  *zoom:1;
+}
