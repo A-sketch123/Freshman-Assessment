@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*这样会使padding和border不会撑大盒子 */
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    border: 0;
+    /*照顾低版本浏览器，若图片外包含标签会有边框问题*/
+    vertical-align: middle;
+    /*取消图片底侧有空白缝隙问题*/
+}
+
+button,
+input {
+    cursor: pointer;
+    /*鼠标滑过时变成手*/
+    border: 0;
+    /*把默认的边框去掉*/
+    outline: none;
+    /*把点击完的蓝色边框去掉*/
+
+}
+
+/*鼠标滑过时变成手*/
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/*清除浮动的影响*/
+.clearfix {
+    /*TE6,7专有*/
+    *zoom: 1;
+}
+
+.carousel {
+    width: 400px;   
+    /* 在此处可自定义轮播图的宽高，记得改完下面的min-width和.carousel img的宽度也要改 */
+    height: 505px;
+    position: relative;
+    overflow: hidden;
+    min-width: 200px;
+}
+
+.carousel li {
+    float: left;
+}
+
+.carousel ul {
+    width: 500%;  /*有n张图片轮播就宽度为（n+1）%*/
+    position: absolute;
+    left: 0;
+}
+
+.carousel img {
+    width: 400px;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    width: 35px;
+    height: 40px;
+    background: rgba(0, 0, 0, .3);
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    display: none;
+    z-index: 2;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.point {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 145px;
+    height: 35px;
+}
+
+ol li {
+    height: 10px;
+    width: 10px;
+    float: left;
+    background-color: #f9f6f5;
+    opacity: 0.8;
+    border-radius: 50%;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.point li:nth-child(n) {
+    margin-right: 20px;
+}
+.point li:last-child{
+    margin-right: 0;
+}
+ol .current {
+        background-color: #4a4441;
+        opacity: 0.8;
+}
