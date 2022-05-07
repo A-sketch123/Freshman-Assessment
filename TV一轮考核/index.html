@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css\style.css">
-    <link rel="stylesheet" href="css\base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/swiper.css">
     <title>千与千寻</title>
 </head>
 
@@ -43,7 +44,9 @@
     </div>
     <!-- 故事简介 -->
     <div id="story" class="summary">
-        <div class="target">
+
+        <!-- 轮播图版本一：纯css实现，不推荐 -->
+         <!-- <div class="target">
             <div class="href">
                 <a href="#a"></a>
                 <a href="#b"></a>
@@ -52,13 +55,37 @@
                 <a href="#e"></a>
             </div>
             <div class="imgmas">
-                <img src="img/run1.png" alt="" id="a">
+                <img src="img/run1.jpg" alt="" id="a">
                 <img src="img/run2.jpg" alt="" id="b" class="im">
                 <img src="img/run3.jpg" alt="" id="c" class="im">
                 <img src="img/run4.jpg" alt="" id="d" class="im">
                 <img src="img/run5.jpg" alt="" id="e" class="im">
             </div>
-        </div>
+        </div>  -->
+
+        <!-- 轮播图版本二：js封装的轮播图推荐 -->
+
+ <div class="swiper">
+     
+      <a href="javascript:;" class="prev">&lt;</a>
+      <a href="javascript:;" class="next">&gt;</a>
+      <ul id="ulSwiper">
+        <li>
+          <a href=""><img src="img/run1.jpg" alt="" /></a>
+        </li>
+        <li>
+          <a href=""><img src="img/run2.jpg" alt="" /></a>
+        </li>
+        <li>
+          <a href=""><img src="img/run3.jpg" alt="" /></a>
+        </li>
+        <li>
+          <a href=""><img src="img/run4.jpg" alt="" /></a>
+        </li>
+      </ul>
+      
+      <ol class="point"></ol>
+ </div>
         <div class="text">
             <p class="p">好高兴，能在这个世界遇到你</p>
             <div class="center">
@@ -260,5 +287,6 @@
         </div>
     </div>
 </body>
-
 </html>
+         <script src="js/animate.js"></script>
+    <script src="js/carousel.js"></script>

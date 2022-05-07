@@ -1,482 +1,538 @@
 /*头部导航栏制作*/
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 70px;
-  width: 100%;
-  position: fixed;
-  background-color:white;
-  z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    z-index: 99;
 }
-body{
-  overflow-x: hidden;
+
+body {
+    overflow-x: hidden;
 }
+
 .logo img {
-  max-height: 100%;
-  width: 150px;
-  -moz-transition: all 0.5s;
-  transition: all 0.5s;
+    max-height: 100%;
+    width: 150px;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
 }
+
 .logo img:hover {
-  -moz-transform: scale(1.2);
-  transform: scale(1.3);
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
 }
+
 ul {
-  display: flex;
+    display: flex;
 }
 
 .header ul li {
-  margin: 0 35px;
-  transition: 0.6s;
-}
-.header ul li a {
-  display: block;
-  position: relative;
-  padding: 5px;
-  font-size: 22px;
-  font-family: sans-serif;
-  color: #fcdcfd;
-  font-weight: 700;
-  transition: 0.6s;
-}
-/*将鼠标没移入的字变模糊*/
-ul:hover li a {
-  transform: scale(1.8);
-  opacity: 0.5;
-  filter: blur(4px);
+    margin: 0 35px;
+    transition: 0.6s;
 }
 
+.header ul li a {
+    display: block;
+    position: relative;
+    padding: 5px;
+    font-size: 22px;
+    font-family: sans-serif;
+    color: #fcdcfd;
+    font-weight: 700;
+    transition: 0.6s;
+}
+
+
 ul li a:hover {
-  transform: scale(1.4);
-  opacity: 1;
-  filter: blur(0);
+    transform: scale(1.3);
 }
+
 .audio-text {
-  position: absolute;
-  font-size: 18px;
-  font-weight: 600;
-  color: peachpuff;
-  opacity: 0;
-  transition: all 0.5s;
+    position: absolute;
+    font-size: 18px;
+    font-weight: 600;
+    color: peachpuff;
+    opacity: 0;
+    transition: all 0.5s;
 }
+
 .audio:hover .audio-text {
-  opacity: 0.8;
+    opacity: 0.8;
 }
+
 .photo {
-  width: 100%;
-  height: 650px;
-  background: url(../img/renwen4.png);
+    width: 100%;
+    height: 650px;
+    background: url(../img/renwen4.png);
 }
+
 /*旋转图制作*/
 .view {
-  margin-top: 500px;
-  width: 400px;
-  height: 600px;
-  position: relative;
-  margin: auto;
-  padding-top: 100px;
-  perspective: 5000px;
-  transform-style: preserve-3d;
-  /*添加动画效果*/
-  animation: rotate 14s linear infinite;
-  background: url(../img/zd.png) no-repeat;
-  background-position: 5px 100px;
+    margin-top: 500px;
+    width: 350px;
+    height: 500px;
+    position: relative;
+    margin: auto;
+    padding-top: 100px;
+    perspective: 12000px;
+    transform-style: preserve-3d;
+    /*添加动画效果*/
+    animation: rotate 15s linear infinite;
+    background: url(../img/zd.png) no-repeat;
+    background-position: 5px 120px;
 }
-.view:hover {
-  animation-play-state: paused;
-}
+
 @keyframes rotate {
-  0% {
-    transform: rotateY(0);
-  }
-  100% {
-    transform: rotateY(360deg);
-  }
+    0% {
+        transform: rotateY(0);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
 }
+
 .view .carousel {
-  position: absolute;
-  top: 28%;
-  left: 1%;
-  width: 100%;
-  height: 80%;
-  background: url(../img/11.png) no-repeat;
+    position: absolute;
+    top: 28%;
+    left: 1%;
+    width: 100%;
+    height: 80%;
+    background: url(../img/11.png) no-repeat;
 }
 
 .view div:nth-child(1) {
-  transform: rotateY(0) translateZ(400px);
+    transform: rotateY(0) translateZ(400px);
 }
+
 .view div:nth-child(2) {
-  transform: rotateY(60deg) translateZ(400px);
-  /*一共六张图，转360度一圈*/
+    transform: rotateY(60deg) translateZ(400px);
+    /*一共六张图，转360度一圈*/
 }
+
 .view div:nth-child(3) {
-  transform: rotateY(120deg) translateZ(400px);
+    transform: rotateY(120deg) translateZ(400px);
 }
+
 .view div:nth-child(4) {
-  transform: rotateY(180deg) translateZ(400px);
+    transform: rotateY(180deg) translateZ(400px);
 }
+
 .view div:nth-child(5) {
-  transform: rotateY(240deg) translateZ(400px);
+    transform: rotateY(240deg) translateZ(400px);
 }
+
 .view div:nth-child(6) {
-  transform: rotateY(300deg) translateZ(400px);
+    transform: rotateY(300deg) translateZ(400px);
 }
+
 /*故事简介部分*/
 
 .summary {
-  display: flex;
-  width: 100%;
-  height: 880px;
+    display: flex;
+    width: 100%;
+    height: 700px;
 }
+
 .text {
-  white-space: nowrap;
-  /* display: flex;
+    white-space: nowrap;
+    /* display: flex;
   flex-direction: column; */
-  width: 60%;
-  text-align: center;
-  background-color: #efe5fd;
+    /* width: 65%; */
+    flex: 1;
+    text-align: center;
+    background-color: #efe5fd;
 }
+
 .text .p {
-  margin-top: 30px;
-  font-size: 30px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: rgb(177, 177, 226);
+    margin-top: 20px;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: rgb(177, 177, 226);
 
 }
+
 .text .p:first-child {
-  margin-top: 90px;
+    margin-top: 50px;
 }
 
 .target {
-  width: 50%;
-  height: 880px;
-  position: relative;
+    width: 40%;
+    height: 100%;
+    position: relative;
 }
+
 .imgs {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
+
 .imgmas img {
-  width: 100%;
-  position: absolute;
-  height: 880px;
+    width: 100%;
+    position: absolute;
+    height: 100%;
 }
+
 .href {
-  position: absolute;
-  height: 100%;
+    position: absolute;
+    height: 100%;
 }
+
 .href a {
-  display: block;
-  position: relative;
-  width: 50px;
-  height: 15px;
-  top: 90%;
-  transform: translateX(250%);
-  background-color: rgba(103, 166, 224, 0.6);
-  float: left;
-  margin-left: 5px;
-  border-radius: 10px;
-  transition: 0.8s;
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 15px;
+    top: 90%;
+    transform: translateX(250%);
+    background-color: rgba(103, 166, 224, 0.6);
+    float: left;
+    margin-left: 5px;
+    border-radius: 10px;
+    transition: 0.8s;
 }
+
 .href a:hover {
-  background-color: rgb(0, 0, 0, 0.4);
+    background-color: rgb(0, 0, 0, 0.4);
 }
+
 .imgmas {
-  position: absolute;
-  /*不用挡住按钮*/
-  z-index: -1;
-  width: 100%;
+    position: absolute;
+    /*不会挡住按钮*/
+    z-index: -1;
+    width: 100%;
+    height: 100%;
 }
 
 .im {
-  display: none;
+    display: none;
 }
+
 /*点在哪个按钮图片出现*/
 :target {
-  display: block;
+    display: block;
 }
+
 .center {
-  max-height: 90%;
-  font-size: 20px;
-  color: rgb(189, 189, 211);
+    max-height: 90%;
+    font-size: 19px;
+    color: rgb(189, 189, 211);
 }
+
 .center p {
-  padding-top: 8px;
+    padding-top: 5px;
 }
 
 /*登场人物*/
 /*上面部分*/
 .person,
 .persontwo {
-  margin-top: 30px;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  /* background-color: royalblue;*/
-  font-size: 16px;
-  color: #c4c1ea;
+    margin-top: 30px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    /* background-color: royalblue;*/
+    font-size: 16px;
+    color: #c4c1ea;
 }
+
 .first p:nth-of-type(1),
 .thrist p,
 .second ul li p,
 .persontwo p {
-  font-size: 33px;
-  font-weight: 500;
+    font-size: 33px;
+    font-weight: 500;
 }
+
 .second {
-  width: 600px;
-  height: 0px;
-  /* display: flex;
+    width: 600px;
+    height: 0px;
+    /* display: flex;
   flex-wrap: wrap; */
 }
+
 .second ul {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .second ul li:nth-child(-n + 2) {
-  padding-bottom: 80px;
+    padding-bottom: 80px;
 }
+
 .second ul li:nth-child(3) {
-  padding-bottom: 20px;
+    padding-bottom: 20px;
 }
+
 .thrist img {
-  height: 420px;
+    height: 420px;
 }
+
 /*下面部分*/
 .persontwo {
-  display: flex;
-  margin-top: 160px;
-  justify-content: space-between;
+    display: flex;
+    margin-top: 160px;
+    justify-content: space-between;
 }
+
 .woman {
-  width: 320px;
+    width: 320px;
 }
 
 .woman-two,
 .wln,
 .god {
-  width: 280px;
+    width: 280px;
 }
+
 .woman-two {
-  margin-top: 100px;
+    margin-top: 100px;
 }
 
 /* 电影彩蛋 */
 .movie {
-  display: flex;
-  flex-direction: column;
-  margin-top: 50px;
-  width: 100%;
-  justify-content: space-between;
-  background: url(../img/bg.png);
-  background-size: cover;
-  height: 2800px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 100%;
+    justify-content: space-between;
+    background: url(../img/bg.png);
+    background-size: cover;
+    height: 2800px;
 }
+
 .cd-one {
-  position: relative;
-  width: 60%;
-  height: 520px;
-  background: url(../img/cd3.png) no-repeat;
-  background-size: cover;
-  -moz-transition: all 0.8s;
-  /*火狐浏览器私有前缀*/
-  transition: all 0.8s;
+    position: relative;
+    width: 60%;
+    height: 520px;
+    background: url(../img/cd3.png) no-repeat;
+    background-size: cover;
+    -moz-transition: all 0.8s;
+    /*火狐浏览器私有前缀*/
+    transition: all 0.8s;
 }
+
 .cd-one:hover {
-  background: url(../img/cd4.png) no-repeat;
-  background-size: cover;
-  opacity: 0.8;
+    background: url(../img/cd4.png) no-repeat;
+    background-size: cover;
+    opacity: 0.8;
 }
+
 /*将文字相同的元素写在一起*/
 div[class^="cdtext"] {
-  position: absolute;
-  background: url(../img/98.jpg);
-  text-align: center;
-  padding: 10px;
-  letter-spacing: 5px;
-  color: white;
-  -moz-transition: 0.5s;
-  transition: 0.5s;
-  z-index: 10;
+    position: absolute;
+    background: url(../img/98.jpg);
+    text-align: center;
+    padding: 10px;
+    letter-spacing: 5px;
+    color: white;
+    -moz-transition: 0.5s;
+    transition: 0.5s;
+    z-index: 10;
 }
+
 div[class^="cdtext"]:hover {
-  text-shadow: 0 0 20px;
+    text-shadow: 0 0 20px;
 }
 
 .cdtext1 {
-  right: 0;
-  top: 80%;
-  -moz-transform: translateX(70%);
-  -ms-transform: translateX(70%);
-  transform: translateX(70%);
-  max-width: 620px;
-  height: 200px;
+    right: 0;
+    top: 80%;
+    -moz-transform: translateX(70%);
+    -ms-transform: translateX(70%);
+    transform: translateX(70%);
+    max-width: 620px;
+    height: 200px;
 }
+
 .cdtext1 p,
 .cdtext2 p {
-  font-size: 30px;
+    font-size: 30px;
 }
+
 .cd-two {
-  position: relative;
-  width: 60%;
-  height: 520px;
-  align-self: flex-end;
-  background: url(../img/cd5.jpg) no-repeat;
-  background-size: cover;
-  -moz-transition: all 0.8s linear;
-  transition: all 0.8s linear;
+    position: relative;
+    width: 60%;
+    height: 520px;
+    align-self: flex-end;
+    background: url(../img/cd5.jpg) no-repeat;
+    background-size: cover;
+    -moz-transition: all 0.8s linear;
+    transition: all 0.8s linear;
 }
+
 .cd-two:hover {
-  background: url(../img/cd6.jpg) no-repeat;
-  width: 60%;
-  background-size: cover;
-  right: 0;
+    background: url(../img/cd6.jpg) no-repeat;
+    width: 60%;
+    background-size: cover;
+    right: 0;
 }
+
 .cdtext2,
 .cdtext4 {
-  position: absolute;
-  top: 70%;
-  left: 0;
-  -moz-transform: translateX(-85%);
-  -ms-transform: translateX(-85%);
-  transform: translateX(-85%);
+    position: absolute;
+    top: 70%;
+    left: 0;
+    -moz-transform: translateX(-85%);
+    -ms-transform: translateX(-85%);
+    transform: translateX(-85%);
 }
+
 .cd-three {
-  position: relative;
-  width: 60%;
-  height: 520px;
-  background: url(../img/cd1.jpg) no-repeat;
-  background-size: cover;
-  -moz-transition: all 0.8s ease-in;
-  transition: all 0.8s ease-in;
+    position: relative;
+    width: 60%;
+    height: 520px;
+    background: url(../img/cd1.jpg) no-repeat;
+    background-size: cover;
+    -moz-transition: all 0.8s ease-in;
+    transition: all 0.8s ease-in;
 }
+
 .cd-three:hover {
-  background: url(../img/cd2.jpg) no-repeat;
-  background-size: cover;
+    background: url(../img/cd2.jpg) no-repeat;
+    background-size: cover;
 }
+
 .cd-three .cdtext3 {
-  transform: translateX(85%);
-  right: 0;
-  top: 70%;
+    transform: translateX(85%);
+    right: 0;
+    top: 70%;
 }
+
 .cd-four {
-  position: relative;
-  width: 60%;
-  height: 520px;
-  align-self: flex-end;
-  background: url(../img/cd7.jpg) no-repeat;
-  background-size: cover;
-  -moz-transition: all 0.8s ease-in;
-  transition: all 0.8s ease-in;
+    position: relative;
+    width: 60%;
+    height: 520px;
+    align-self: flex-end;
+    background: url(../img/cd7.jpg) no-repeat;
+    background-size: cover;
+    -moz-transition: all 0.8s ease-in;
+    transition: all 0.8s ease-in;
 }
+
 .cd-four:hover {
-  background: url(../img/cd8.jpg) no-repeat;
-  background-size: cover;
-  /*用background-size:cover防止图片放缩时变化大小*/
+    background: url(../img/cd8.jpg) no-repeat;
+    background-size: cover;
+    /*用background-size:cover防止图片放缩时变化大小*/
 }
 
 /* 幕后故事 */
 .behind {
-  padding-top: 120px;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 1200px;
-  background: url(../img/bg.png);
-  background-size: cover;
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 1200px;
+    background: url(../img/bg.png);
+    background-size: cover;
 }
+
 .together {
-  width: 100%;
-  height: 520px;
-  background: url(../img/hy3.png) no-repeat;
-  background-position: center;
-  position: relative;
+    width: 100%;
+    height: 520px;
+    background: url(../img/hy3.png) no-repeat;
+    background-position: center;
+    position: relative;
 }
+
 .other div:nth-child(1) {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: url(../img/shou4.png) no-repeat;
-  background-position: 70%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(../img/shou4.png) no-repeat;
+    background-position: 70%;
 }
+
 .other div:nth-child(2) {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: url(../img/shou6.png) no-repeat;
-  background-position: 42%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(../img/shou6.png) no-repeat;
+    background-position: 42%;
 }
+
 .other div:nth-child(3) {
-  width: 30%;
-  height: 40%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  background: url(../img/shou8.png) no-repeat;
+    width: 30%;
+    height: 40%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: url(../img/shou8.png) no-repeat;
 }
+
 .other div:nth-child(4) {
-  width: 50%;
-  height: 40%;
-  position: absolute;
-  top: 10%;
-  left: 35%;
-  background: url(../img/shou9.png) no-repeat;
+    width: 50%;
+    height: 40%;
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    background: url(../img/shou9.png) no-repeat;
 }
+
 .other div:nth-child(5) {
-  width: 30%;
-  height: 20%;
-  position: absolute;
-  top: 60%;
-  left: 15%;
-  background: url(../img/shou10.png) no-repeat;
+    width: 30%;
+    height: 20%;
+    position: absolute;
+    top: 60%;
+    left: 15%;
+    background: url(../img/shou10.png) no-repeat;
 }
+
 .other div:nth-child(6) {
-  width: 10%;
-  height: 20%;
-  position: absolute;
-  top: 65%;
-  left: 75%;
-  background: url(../img/shou11.png) no-repeat;
+    width: 10%;
+    height: 20%;
+    position: absolute;
+    top: 65%;
+    left: 75%;
+    background: url(../img/shou11.png) no-repeat;
 }
+
 .content {
-  display: flex;
-  width: 100%;
-  height: 500px;
-  background: url(../img/bg3.png) no-repeat;
-  background-position: center;
-  position: relative;
-  color: white;
-  font-size: 14px;
+    display: flex;
+    width: 100%;
+    height: 500px;
+    background: url(../img/bg3.png) no-repeat;
+    background-position: center;
+    position: relative;
+    color: white;
+    font-size: 14px;
 }
+
 .left {
-  position: absolute;
-  left: 0;
-  top: 5%;
-  width: 50%;
-  text-align: left;
-  padding-left: 14%;
-  padding-right: 2%;
+    position: absolute;
+    left: 0;
+    top: 5%;
+    width: 50%;
+    text-align: left;
+    padding-left: 14%;
+    padding-right: 2%;
 }
+
 .left img {
-  margin-left: -15%;
-  margin-top: 16%;
+    margin-left: -15%;
+    margin-top: 16%;
 }
+
 .lefttext,
 .righttext {
-  line-height: 20px;
+    line-height: 20px;
 }
+
 .right {
-  width: 50%;
-  position: absolute;
-  right: 0;
-  top: 31%;
-  padding-right: 14%;
-  padding-left: 2%;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 31%;
+    padding-right: 14%;
+    padding-left: 2%;
 }
+
 .right img {
-  margin-left: 105%;
+    margin-left: 105%;
 }
